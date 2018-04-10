@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>Address Book</title>
+</head>
+<body>
+ <nav>
+<h1>Address Book</h1>
+  </nav>
+  <br>
+<form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+  <label for="name">Add Address</label><br><br>
+  <input type="text" id="addName" name="name" placeholder ="Add New Address">
+  <button class="button"><span>Add</span></button>
+</form>
+
+<div id="saved" role="aria-hidden">
+  <form action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="text" id="editName">
+    <button class="button"><span>Save</span></button> 
+    <a onclick="CloseInput()" class="button" aria-label="Close">&#10006;</a>
+  </form>
+</div>
+
+<p id="counter"></p>
+
+<table>
+  <tr>
+    <th>Records</th>
+  </tr>
+    <tbody id="address">
+    </tbody>
+</table>
+<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
